@@ -5,7 +5,7 @@
       v-if="!tachesChargees"
       class="q-pa-lg text-center"
     >
-      <q-spinner-radio color="primary" size="4em" />
+      <!-- <q-spinner-radio color="primary" size="4em" /> -->
     </div>
     <!-- Liste des tâches -->
     <q-list
