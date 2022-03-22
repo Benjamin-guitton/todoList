@@ -5,11 +5,12 @@
       v-if="!tachesChargees"
       class="q-pa-lg text-center"
     >
-      <!-- <q-spinner-radio color="primary" size="4em" /> -->
+      <q-spinner-radio color="primary" size="4em" />
     </div>
+    <q-pull-to-refresh @refresh="refresh">
     <!-- Liste des tâches -->
     <q-list
-      v-if="taches.length && !tachesChargees"
+      v-if="taches.length && tachesChargees"
       separator
       bordered
     >
@@ -20,6 +21,7 @@
       >
       </tache>
     </q-list>
+    </q-pull-to-refresh>
 
     <q-page-sticky position="bottom" class="q-mb-lg">
       <q-btn @click="afficherFormTache = true"
